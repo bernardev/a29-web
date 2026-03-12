@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react"
 import { Search } from "lucide-react"
 import PropertyCard from "@/components/PropertyCard"
-import type { Imovel } from "@/data/imoveis"
+import type { Imovel } from "@/lib/imoveis"
 
 export default function ImoveisFilter({ imoveis }: { imoveis: Imovel[] }) {
   const [busca, setBusca] = useState("")

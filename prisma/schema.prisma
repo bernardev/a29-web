@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  createdAt DateTime @default(now())
+}
+
+model Imovel {
+  id           String   @id @default(cuid())
+  slug         String   @unique
+  nome         String
+  tipo         String
+  status       String
+  bairro       String
+  cidade       String
+  endereco     String?
+  preco        String
+  precoApartir Boolean  @default(false)
+  area         String
+  quartos      Int?
+  suites       Int?
+  banheiros    Int?
+  vagas        Int?
+  descricao    String
+  destaque     Boolean  @default(false)
+  construtora  String?
+  entrega      String?
+  diferenciais String[]
+  lazer        String[]
+  imagens      String[]
+  ordem        Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}

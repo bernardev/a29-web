@@ -4,10 +4,12 @@ import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import WhatsAppFloat from "@/components/WhatsAppFloat"
 import PropertyCard from "@/components/PropertyCard"
-import { getImoveisDestaque } from "@/data/imoveis"
+import { getImoveisDestaque } from "@/lib/imoveis"
 
-export default function Home() {
-  const destaques = getImoveisDestaque()
+export const dynamic = "force-dynamic"
+
+export default async function Home() {
+  const destaques = await getImoveisDestaque()
 
   return (
     <>

@@ -17,15 +17,22 @@ import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import WhatsAppFloat from "@/components/WhatsAppFloat"
 import ImageGallery from "@/components/ImageGallery"
-import { imoveis, getImovelBySlug } from "@/data/imoveis"
+import { getImovelBySlug, getAllImoveis } from "@/lib/imoveis"
 
-export function generateStaticParams() {
-  return imoveis.map((i) => ({ slug: i.slug }))
+export const dynamicParams = true
+
+export async function generateStaticParams() {
+  try {
+    const imoveis = await getAllImoveis()
+    return imoveis.map((i) => ({ slug: i.slug }))
+  } catch {
+    return []
+  }
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const imovel = getImovelBySlug(slug)
+  const imovel = await getImovelBySlug(slug)
   if (!imovel) return { title: "Imóvel não encontrado" }
   return {
     title: `${imovel.nome} | A29 Imóveis`,
@@ -35,7 +42,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ImovelPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const imovel = getImovelBySlug(slug)
+  const imovel = await getImovelBySlug(slug)
   if (!imovel) notFound()
 
   const whatsappMsg = encodeURIComponent(

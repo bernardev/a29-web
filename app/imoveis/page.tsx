@@ -2,14 +2,18 @@ import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import WhatsAppFloat from "@/components/WhatsAppFloat"
 import ImoveisFilter from "@/components/ImoveisFilter"
-import { imoveis } from "@/data/imoveis"
+import { getAllImoveis } from "@/lib/imoveis"
+
+export const dynamic = "force-dynamic"
 
 export const metadata = {
   title: "Imóveis | A29 Imóveis",
   description: "Confira todos os imóveis disponíveis na A29 Imóveis. Apartamentos, casas e sobrados em Curitiba e região.",
 }
 
-export default function ImoveisPage() {
+export default async function ImoveisPage() {
+  const imoveis = await getAllImoveis()
+
   return (
     <>
       <Header />

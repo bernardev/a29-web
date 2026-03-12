@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { MapPin, BedDouble, Car, Maximize } from "lucide-react"
-import type { Imovel } from "@/data/imoveis"
+import type { Imovel } from "@/lib/imoveis"
 
 export default function PropertyCard({ imovel }: { imovel: Imovel }) {
   return (
