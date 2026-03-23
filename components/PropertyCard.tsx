@@ -21,7 +21,9 @@ export default function PropertyCard({ imovel }: { imovel: Imovel }) {
           {imovel.status}
         </span>
         {/* Type Badge */}
-        <span className="absolute top-4 right-4 bg-primary/80 backdrop-blur-sm text-white text-[11px] font-medium px-3.5 py-1.5 rounded-full">
+        <span className={`absolute bg-[#1a2a6c]/80 backdrop-blur-sm text-white text-[11px] font-medium px-3.5 py-1.5 rounded-full ${
+          imovel.tipo === "Apartamento" ? "top-12 left-4" : "top-4 right-4"
+        }`}>
           {imovel.tipo}
         </span>
       </div>

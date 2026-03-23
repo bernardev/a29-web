@@ -55,7 +55,7 @@ export default async function ImovelPage({ params }: { params: Promise<{ slug: s
       <WhatsAppFloat />
 
       {/* Back + Breadcrumb */}
-      <div className="bg-primary pt-28 pb-6">
+      <div className="bg-[#1a2a6c] pt-28 pb-6">
         <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-20">
           <Link
             href="/imoveis"
@@ -68,7 +68,7 @@ export default async function ImovelPage({ params }: { params: Promise<{ slug: s
       </div>
 
       {/* Gallery */}
-      <section className="bg-primary pb-8">
+      <section className="bg-[#1a2a6c] pb-8">
         <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-20">
           <ImageGallery images={imovel.imagens} nome={imovel.nome} />
         </div>

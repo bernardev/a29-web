@@ -157,7 +157,7 @@ export default async function Home() {
       </section>
 
       {/* Diferenciais */}
-      <section className="py-28 sm:py-36 bg-primary text-white">
+      <section className="py-28 sm:py-36 bg-[#1a2a6c] text-white">
         <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-20">
           <div className="text-center mb-20">
             <span className="text-accent text-sm font-semibold uppercase tracking-[0.3em] block mb-5">

@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, Instagram } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white">
+    <footer className="bg-[#1a2a6c] text-white">
       <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-20 py-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
           {/* Brand */}
@@ -11,7 +11,7 @@ export default function Footer() {
             <img
               src="https://khaki-chough-664761.hostingersite.com/wp-content/uploads/2025/11/WhatsApp_Image_2025-10-23_at_14.05.56-removebg-preview.png"
               alt="A29 Imóveis"
-              className="h-20 w-auto mb-6"
+              className="h-28 w-auto mb-6"
             />
             <p className="text-white/60 text-sm leading-loose max-w-xs">
               Consultoria imobiliária personalizada em Curitiba e região.

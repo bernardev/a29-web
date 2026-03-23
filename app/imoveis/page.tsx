@@ -20,7 +20,7 @@ export default async function ImoveisPage() {
       <WhatsAppFloat />
 
       {/* Hero */}
-      <section className="bg-primary pt-36 pb-20">
+      <section className="bg-[#1a2a6c] pt-36 pb-20">
         <div className="max-w-6xl mx-auto px-8 sm:px-12 lg:px-20 text-center">
           <span className="text-accent text-sm font-semibold uppercase tracking-[0.3em] block mb-4">
             Nosso Portfólio

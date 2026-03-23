@@ -18,7 +18,7 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-primary/95 backdrop-blur-md shadow-lg py-3"
+          ? "bg-[#1a2a6c]/95 backdrop-blur-md shadow-lg py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -28,7 +28,7 @@ export default function Header() {
           <img
             src="https://khaki-chough-664761.hostingersite.com/wp-content/uploads/2025/11/WhatsApp_Image_2025-10-23_at_14.05.56-removebg-preview.png"
             alt="A29 Imóveis"
-            className="h-14 sm:h-16 w-auto"
+            className="h-20 sm:h-24 w-auto"
           />
         </Link>
 
@@ -66,7 +66,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-primary/98 backdrop-blur-md transition-all duration-300 overflow-hidden ${
+        className={`md:hidden absolute top-full left-0 right-0 bg-[#1a2a6c]/98 backdrop-blur-md transition-all duration-300 overflow-hidden ${
           menuOpen ? "max-h-80 border-t border-white/10" : "max-h-0"
         }`}
       >
